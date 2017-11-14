@@ -1,0 +1,32 @@
+target:
+    image: cam1.tif 
+    number: 0
+    ori_file: cam1.tif.ori
+    addpar_file: cam1.tif.addpar
+    known_points: flat_target.txt
+    manual_detection_points: [ 1, 11, 56, 66 ]
+    manual_detection_file: cam1_man.dat
+    glass_vec: [ -100., 0., 500 ]
+
+scene:
+    flags: hp, headers
+    image_size: [ 2432, 1728 ]
+    pixel_size: [ 0.006, 0.006 ]
+    
+    # Multimedia parameters:
+    cam_side_n: 1.0  # air
+    object_side_n: 1.33  # water
+    wall_ns: [ 1.46 ] # perspex
+    wall_thicks: [ 9.0 ]
+
+detection:
+    discont: 500
+    gvthresh: [10, 10, 10, 10]
+    pixel_count_bounds: [100, 2000]
+    xsize_bounds: [10, 100]
+    ysize_bounds: [10, 100]
+    min_sum_grey: 200
+    cross_size: 2
+
+default_free_vars: [ cc ]
+
