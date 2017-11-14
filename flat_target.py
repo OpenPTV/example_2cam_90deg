@@ -20,4 +20,9 @@ flat_target[33:44,2] = np.arange(0,11*10,10.)
 flat_target[44:55,2] = np.arange(0,11*10,10.)
 flat_target[55:,2] =   np.arange(0,11*10,10.)
 
-np.savetxt('flat_target.txt',flat_target, fmt = '%6.3f',delimiter='\t')
+
+#shift the 0,0 to the center of the plate
+flat_target[:,1] -= 25.0
+flat_target[:,2] -= 50.0
+
+np.savetxt('flat_target.txt',flat_target, fmt = '%d \t %6.4f \t %6.4f \t %6.4f')
