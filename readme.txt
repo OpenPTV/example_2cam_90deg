@@ -1,0 +1,1 @@
+The tank is 320mm x320mm. The walls are 9mm thick. The point number one of the grid is 116.8mm from the wall looking at Camera 1 and 169.8mm from the wall looking at Camera 2. The center of the grid is approximately in the center of the aquarium.
